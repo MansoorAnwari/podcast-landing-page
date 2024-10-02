@@ -943,6 +943,23 @@ video {
   animation: count 2s ease-in-out forwards;
 }
 
+/* Button Styles */
+.btn-primary, .btn-secondary {
+  background-color: #FF5733;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #C70039;
+  transform: scale(1.05);
+}
+
 @keyframes count {
   from {
     opacity: 0;
