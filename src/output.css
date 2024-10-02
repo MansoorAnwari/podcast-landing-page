@@ -932,3 +932,25 @@ video {
     line-height: 1.75rem;
   }
 }
+
+.counter {
+  font-size: 80px;
+  font-weight: bold;
+  color: #ED7F39;
+}
+
+.counter-animation {
+  animation: count 2s ease-in-out forwards;
+}
+
+@keyframes count {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

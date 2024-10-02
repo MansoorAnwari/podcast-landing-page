@@ -114,5 +114,51 @@
     </div>
 </section>
 
+<!-- stats section -->
+<section class="flex items-center justify-center py-[100px]">
+    <div class="max-w-[800px] w-[90%] mx-auto">
+        <div class="flex justify-between md:flex-row flex-col md:gap-5 gap-10">
+            <div class="text-center">
+                <h1 class="counter">50</h1>
+                <p class="text-xl">episodes</p>
+            </div>
+            <div class="text-center">
+                <h1 class="counter">100</h1>
+                <p class="text-xl">hrs of talk</p>
+            </div>
+            <div class="text-center">
+                <h1 class="counter">80</h1>
+                <p class="text-xl">guests</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            let count = 0;
+            const target = parseInt(counter.textContent, 10);
+            const speed = 100;
+
+            const updateCounter = () => {
+                count += 1;
+                counter.textContent = count + '+';
+
+                if (count < target) {
+                    setTimeout(updateCounter, speed);
+                } else {
+                    counter.classList.add('counter-animation');
+                }
+            };
+
+            updateCounter();
+        });
+    }
+    window.onload = animateCounters;
+</script>
+
 </body>
 </html>
